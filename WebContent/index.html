@@ -3,14 +3,16 @@
 
 <head>
 
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" />
-<!--Own CSS-->
-<link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection" />
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		media="screen,projection" />
+	<!--Own CSS-->
+	<link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection" />
 
 </head>
 
@@ -48,9 +50,27 @@
 			<div class="indeterminate"></div>
 		</div>
 
+		<!-- Order by select -->
+		<label>Order by</label>
+		<select id="orderBy" class="browser-default" onchange="getOrderValues()">
+			<option value="id">Identifier</option>
+			<option value="nombre">Name</option>
+			<option value="raza">Breed</option>
+		</select>
+
+		<!-- Switch -->
+		<div class="switch center-align">
+			<label>
+			  Ascending
+			  <input id="orderType" type="checkbox" onchange="getOrderValues()">
+			  <span class="lever"></span>
+			  Descending
+			</label>
+		  </div>
+
 		<ul id="dog-list" class="collection">
 
-			<!-- Will be filled with JS -->
+		<!-- Will be filled in with JS -->
 
 		</ul>
 
@@ -63,7 +83,8 @@
 	</footer>
 
 	<!--JavaScript at end of body for optimized loading-->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!--Own JS-->
 	<script type="text/javascript" src="js/main.js"></script>
 
